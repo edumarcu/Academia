@@ -1,4 +1,6 @@
-package curso.ejercicioacademia;
+package curso.ejercicioacademia.application;
+
+import curso.ejercicioacademia.*;
 
 public class App 
 {
