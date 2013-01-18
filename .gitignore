@@ -4,3 +4,9 @@
 *.jar
 *.war
 *.ear
+
+# Proyecto Maven, ficheros a ignorar
+dist
+build
+private
+target
