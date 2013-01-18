@@ -1,5 +1,5 @@
 hackeandote....
-/*estoy ahora*/ estabas...
+/*estoy ahora*/ /*estabas...*/ vuelves a estar
 con este ficherito
 
 de textito
