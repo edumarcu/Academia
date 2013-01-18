@@ -39,10 +39,10 @@ public abstract class Persona {
     public abstract int hashCode(); 
 
     @Override
-    public abstract boolean equals();
+    public abstract boolean equals(Object obj);
 
     @Override
     public abstract String toString();
     
-    // falta clone y equals
+    // falta clone
 }
