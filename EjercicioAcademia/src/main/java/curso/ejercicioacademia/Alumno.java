@@ -13,7 +13,7 @@ public class Alumno extends Persona{
     public Alumno() {
         setId(idsAlumnos);
         idsAlumnos++;
-        setAsignaturas(new HashSet<Asignatura>);
+        setAsignaturas(new HashSet<Asignatura>());
     }
 
     public Alumno(String nombre) {
