@@ -46,6 +46,5 @@ public class App {
             str += "\n\t" + a.getNombre();
         }
         return str;
->>>>>>> Academia y App
     }
 }

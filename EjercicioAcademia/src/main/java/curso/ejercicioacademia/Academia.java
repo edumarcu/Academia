@@ -14,21 +14,14 @@ public class Academia {
     Map<Integer,Asignatura> asignaturas = new HashMap<Integer, Asignatura>();
     Map<String,Aula> aulas = new HashMap<String, Aula>();
 
-<<<<<<< HEAD
-=======
     public Academia() {
     }
 
->>>>>>> Academia y App
     public Academia(String nombre, String direccion) {
         this.nombre = nombre;
         this.direccion = direccion;
     }
-<<<<<<< HEAD
-       
-=======
     
->>>>>>> Academia y App
     public void add(Alumno alumno){
         alumnos.put(alumno.getId(),alumno);
     }
