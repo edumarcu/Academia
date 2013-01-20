@@ -2,6 +2,8 @@ package curso.ejercicioacademia;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
+import java.util.SortedMap;
 
 public class Academia {
     private String nombre;
@@ -11,6 +13,14 @@ public class Academia {
     Map<Integer,Profesor> profesores = new HashMap<Integer, Profesor>();
     Map<Integer,Asignatura> asignaturas = new HashMap<Integer, Asignatura>();
     Map<String,Aula> aulas = new HashMap<String, Aula>();
+
+    public Academia() {
+    }
+
+    public Academia(String nombre, String direccion) {
+        this.nombre = nombre;
+        this.direccion = direccion;
+    }
     
     public void add(Alumno alumno){
         alumnos.put(alumno.getId(),alumno);
@@ -37,40 +47,26 @@ public class Academia {
     public void remove(Aula aula){
         aulas.remove(aula.getNombre());
     }
-    
-    public String getAsignaturas(){
-        String str = "Las asignaturas de la academia son: ";
-        
-        for (Asignatura a : asignaturas.values()){
-            str += "\n\t" + a.getNombre();
-        }
-        return str;
+   
+    public SortedMap<Integer,Asignatura> getAsignaturas(){     
+        return (SortedMap) asignaturas;
     }
     
-    public String getProfesores(){
-        String str = "Los profesores de la academia son: ";
+    public SortedMap<Integer,Profesor> getProfesores(){     
+        return (SortedMap) profesores;
+    }
         
-        for (Profesor p : profesores.values()){
-            str += "\n\t" + p.getNombre();
-        }
-        return str;
+    public SortedMap<String,Aula> getAulas(){     
+        return (SortedMap) aulas;
+    }
+            
+    public SortedMap<Integer,Alumno> getAlumnos(){     
+        return (SortedMap) alumnos;
+    }       
+
+    @Override
+    public String toString() {
+        return "Academia{" + "nombre=" + nombre + ", direccion=" + direccion + '}';
     }
     
-    public String getAulas(){
-        String str = "Las aulas de la academia son: ";
-        
-        for (Aula a : aulas.values()){
-            str += "\n\t" + a.getNombre();
-        }
-        return str;
-    }
-    
-    public String getAlumnos(){
-        String str = "Los alumnos de la academia son: ";
-        
-        for (Alumno a : alumnos.values()){
-            str += "\n\t" + a.getNombre();
-        }
-        return str;
-    }
 }
