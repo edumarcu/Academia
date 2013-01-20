@@ -92,20 +92,11 @@ public class Asignatura {
     
     public void add(Alumno alumno){
         alumnos.add(alumno);
-        if (!buscarElementoEnSet(alumno.asignaturas,this.id) ){
-            alumno.add(this);
+        if (alumno.getAsignaturas().contains(id)){
+            Set<Asignatura> set = new HashSet<Asignatura>();
+            set = alumno.getAsignaturas();
+            set.add(this);
+            alumno.setAsignaturas(set);
         }
     }
-    
-    // Se podría hacer genérico
-    public static boolean buscarElementoEnSet(HashSet<Alumno> set,int id){
-        for (Alumno a: set){
-            if (a.getId() == id){
-                return true;
-            }
-        }
-        return false;
 }
-
-}
-
