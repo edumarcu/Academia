@@ -19,7 +19,19 @@ public class Alumno extends Persona{
     public Alumno(String nombre) {
         this();
         setNombre(nombre);        
-    } 
+    }
+    
+     @Override
+     public void addAsignatura(Asignatura asignatura) {
+        getAsignaturas().add(asignatura);
+        asignatura.addAlumno(this);
+    }
+    
+    @Override
+    public void removeAsignatura(Asignatura asignatura) {
+        getAsignaturas().remove(asignatura);
+        asignatura.removeAlumno(this);
+    }
 
     @Override
     public String toString() {

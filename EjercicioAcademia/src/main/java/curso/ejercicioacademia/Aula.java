@@ -66,6 +66,16 @@ public class Aula {
     public void setAsignaturas(Set<Asignatura> asignaturas) {
         this.asignaturas = asignaturas;
     }
+    
+    public void addAsignatura(Asignatura asignatura) {
+        getAsignaturas().add(asignatura);
+        asignatura.addAula(this);
+    }
+
+    public void removeAsignatura(Asignatura asignatura) {
+        getAsignaturas().remove(asignatura);
+        asignatura.removeAula(this);
+    }
 
     @Override
     public int hashCode() {

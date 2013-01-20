@@ -22,6 +22,18 @@ public class Profesor extends Persona{
     }
     
     @Override
+     public void addAsignatura(Asignatura asignatura) {
+        getAsignaturas().add(asignatura);
+        asignatura.addProfesor(this);
+    }
+    
+    @Override
+    public void removeAsignatura(Asignatura asignatura) {
+        getAsignaturas().remove(asignatura);
+        asignatura.removeProfesor(this);
+    }
+    
+    @Override
     public String toString() {
         return "Profesor{" + "id=" + this.getId() + ", nombre="
                                  + this.getNombre() + '}';
