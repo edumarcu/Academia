@@ -38,13 +38,9 @@ public abstract class Persona {
         this.asignaturas = asignaturas;
     }
     
-    public void addAsignatura(Asignatura asignatura) {
-        this.asignaturas.add(asignatura);
-    }
+    public abstract void addAsignatura(Asignatura asignatura);
     
-    public void removeAsignatura(Asignatura asignatura) {
-        this.asignaturas.remove(asignatura);
-    }
+    public abstract void removeAsignatura(Asignatura asignatura);
 
     @Override
     public int hashCode() {
