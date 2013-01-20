@@ -1,5 +1,7 @@
 package curso.ejercicioacademia;
 
+import java.util.HashSet;
+
 /**
  *
  * @author EM
@@ -11,6 +13,7 @@ public class Profesor extends Persona{
     public Profesor() {
         setId(idsProfesores);
         idsProfesores++;
+        setAsignaturas(new HashSet<Asignatura>());
     }
 
     public Profesor(String nombre) {
