@@ -46,12 +46,5 @@ public class App {
             str += "\n\t" + a.getNombre();
         }
         return str;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Academia y App
->>>>>>> origin/master
-=======
->>>>>>> origin/master
     }
 }
