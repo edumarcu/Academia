@@ -36,9 +36,6 @@ public abstract class Persona {
     }
 
     @Override
-<<<<<<< HEAD
-    public abstract boolean equals(Object obj);
-=======
     public boolean equals(Object obj) {
         if (obj == null) {
             return false;
@@ -55,7 +52,6 @@ public abstract class Persona {
         }
         return true;
     }
->>>>>>> origin/Edu
 
     @Override
     public abstract String toString();
@@ -63,8 +59,4 @@ public abstract class Persona {
     @Override
     protected abstract Object clone();
     
-<<<<<<< HEAD
-    // falta clone
-=======
->>>>>>> origin/Edu
 }

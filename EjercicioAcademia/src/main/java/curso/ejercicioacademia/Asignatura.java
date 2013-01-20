@@ -17,28 +17,5 @@ public class Asignatura {
     public Asignatura(){
         this.id += 1;
     }
-<<<<<<< HEAD
-    public void add(Alumno alumno){
-        alumnos.add(alumno);
-    }
-    public void set(Profesor profesor){
-        this.profesor = profesor;
-    }
-    
-    public void set(Aula aula){
-        this.aula = aula;
-    }
-}
 
-class Profesor{
-    
 }
-class Aula{
-    
-}
-class Alumno{
-    
-}
-=======
-}
->>>>>>> origin/Edu
