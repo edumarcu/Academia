@@ -7,6 +7,7 @@ package curso.ejercicioacademia;
 public class Aula {
     private int nombre;
     private int capacidad;
+    private boolean tieneProyector;
 
     public Aula() {
     }
@@ -14,6 +15,13 @@ public class Aula {
     public Aula(int nombre, int capacidad) {
         this.nombre = nombre;
         this.capacidad = capacidad;
+        this.tieneProyector = false;
+    }
+
+    public Aula(int nombre, int capacidad, boolean tieneProyector) {
+        this.nombre = nombre;
+        this.capacidad = capacidad;
+        this.tieneProyector = tieneProyector;
     }
     
     public int getNombre() {
@@ -23,6 +31,7 @@ public class Aula {
     public void setNombre(int nombre) {
         this.nombre = nombre;
     }
+    
 
     public int getCapacidad() {
         return capacidad;
@@ -32,11 +41,20 @@ public class Aula {
         this.capacidad = capacidad;
     }
 
+    public boolean getTieneProyector() {
+        return tieneProyector;
+    }
+
+    public void setTieneProyector(boolean tieneProyector) {
+        this.tieneProyector = tieneProyector;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 79 * hash + this.nombre;
-        hash = 79 * hash + this.capacidad;
+        hash = 29 * hash + this.nombre;
+        hash = 29 * hash + this.capacidad;
+        hash = 29 * hash + (this.tieneProyector ? 1 : 0);
         return hash;
     }
 
@@ -55,17 +73,20 @@ public class Aula {
         if (this.capacidad != other.capacidad) {
             return false;
         }
+        if (this.tieneProyector != other.tieneProyector) {
+            return false;
+        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "Aula{" + "nombre=" + nombre + ", capacidad=" + capacidad + '}';
+        return "Aula{" + "nombre=" + nombre + ", capacidad=" + capacidad + ", tieneProyector=" + tieneProyector + '}';
     }
 
     @Override
     public Aula clone() {
-        Aula a = new Aula(this.nombre, this.capacidad);
+        Aula a = new Aula(this.nombre, this.capacidad, this.tieneProyector);
         return a;
     }
     
