@@ -90,16 +90,17 @@ public class Asignatura {
         this.alumnos = alumnos;
     }
     
-    public void add(Alumno alumno){
+    public void addAlumno(Alumno alumno){
         alumnos.add(alumno);
-        if (!alumno.getAsignaturas().contains(id)){
-            Set<Asignatura> set = new HashSet<Asignatura>();
-            set = alumno.getAsignaturas();
-            set.add(this);
-            alumno.setAsignaturas(set);
-
-        if (!buscarElementoEnSet(alumno.asignaturas,this.id) ){
-            alumno.add(this);
+        if (!alumno.getAsignaturas().contains(this.id)){
+            alumno.addAsignatura(this);
+        }       
+    }
+    
+    public void removeAlumno(Alumno alumno){
+        alumnos.remove(alumno);
+        if (!alumno.getAsignaturas().contains(this.id)){
+            alumno.removeAsignatura(this);
         }
     }
 }
