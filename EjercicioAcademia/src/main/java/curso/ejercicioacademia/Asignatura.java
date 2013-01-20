@@ -97,7 +97,7 @@ public class Asignatura {
             set = alumno.getAsignaturas();
             set.add(this);
             alumno.setAsignaturas(set);
-=======
+
         if (!buscarElementoEnSet(alumno.asignaturas,this.id) ){
             alumno.add(this);
         }
