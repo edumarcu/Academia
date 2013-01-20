@@ -17,6 +17,7 @@ public class Asignatura {
     public Asignatura(){
         this.id += 1;
     }
+<<<<<<< HEAD
     public void add(Alumno alumno){
         alumnos.add(alumno);
     }
@@ -38,3 +39,6 @@ class Aula{
 class Alumno{
     
 }
+=======
+}
+>>>>>>> origin/Edu
