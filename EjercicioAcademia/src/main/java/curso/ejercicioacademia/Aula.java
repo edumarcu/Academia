@@ -5,30 +5,30 @@ package curso.ejercicioacademia;
  * @author EM
  */
 public class Aula {
-    private int nombre;
+    private String nombre;
     private int capacidad;
     private boolean tieneProyector;
 
     public Aula() {
     }
     
-    public Aula(int nombre, int capacidad) {
+    public Aula(String nombre, int capacidad) {
         this.nombre = nombre;
         this.capacidad = capacidad;
         this.tieneProyector = false;
     }
 
-    public Aula(int nombre, int capacidad, boolean tieneProyector) {
+    public Aula(String nombre, int capacidad, boolean tieneProyector) {
         this.nombre = nombre;
         this.capacidad = capacidad;
         this.tieneProyector = tieneProyector;
     }
     
-    public int getNombre() {
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(int nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
     
@@ -52,9 +52,9 @@ public class Aula {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 29 * hash + this.nombre;
-        hash = 29 * hash + this.capacidad;
-        hash = 29 * hash + (this.tieneProyector ? 1 : 0);
+        hash = 53 * hash + (this.nombre != null ? this.nombre.hashCode() : 0);
+        hash = 53 * hash + this.capacidad;
+        hash = 53 * hash + (this.tieneProyector ? 1 : 0);
         return hash;
     }
 
