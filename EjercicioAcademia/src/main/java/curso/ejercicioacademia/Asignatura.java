@@ -92,11 +92,16 @@ public class Asignatura {
     
     public void add(Alumno alumno){
         alumnos.add(alumno);
+<<<<<<< HEAD
         if (!alumno.getAsignaturas().contains(id)){
             Set<Asignatura> set = new HashSet<Asignatura>();
             set = alumno.getAsignaturas();
             set.add(this);
             alumno.setAsignaturas(set);
+=======
+        if (!buscarElementoEnSet(alumno.asignaturas,this.id) ){
+            alumno.add(this);
+>>>>>>> Domingo v2
         }
     }
 }
