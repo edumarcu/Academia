@@ -92,10 +92,9 @@ public class Asignatura {
     
     public void add(Alumno alumno){
         alumnos.add(alumno);
-        if (buscarElementoEnSet(alumno.asignaturas,this.id) ){
-            
+        if (!buscarElementoEnSet(alumno.asignaturas,this.id) ){
+            alumno.add(this);
         }
-        
     }
     
     // Se podría hacer genérico

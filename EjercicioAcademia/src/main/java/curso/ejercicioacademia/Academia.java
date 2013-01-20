@@ -46,4 +46,31 @@ public class Academia {
         }
         return str;
     }
+    
+    public String getProfesores(){
+        String str = "Los profesores de la academia son: ";
+        
+        for (Profesor p : profesores.values()){
+            str += "\n\t" + p.getNombre();
+        }
+        return str;
+    }
+    
+    public String getAulas(){
+        String str = "Las aulas de la academia son: ";
+        
+        for (Aula a : aulas.values()){
+            str += "\n\t" + a.getNombre();
+        }
+        return str;
+    }
+    
+    public String getAlumnos(){
+        String str = "Los alumnos de la academia son: ";
+        
+        for (Alumno a : alumnos.values()){
+            str += "\n\t" + a.getNombre();
+        }
+        return str;
+    }
 }
