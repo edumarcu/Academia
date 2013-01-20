@@ -92,7 +92,7 @@ public class Asignatura {
     
     public void add(Alumno alumno){
         alumnos.add(alumno);
-        if (alumno.getAsignaturas().contains(id)){
+        if (!alumno.getAsignaturas().contains(id)){
             Set<Asignatura> set = new HashSet<Asignatura>();
             set = alumno.getAsignaturas();
             set.add(this);
