@@ -12,7 +12,7 @@ public abstract class Persona {
     
     private int id;
     private String nombre;
-    private Set<Asignatura> asignatura;
+    private Set<Asignatura> asignaturas;
 
     public int getId() {
         return id;
@@ -28,6 +28,22 @@ public abstract class Persona {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public Set<Asignatura> getAsignaturas() {
+        return asignaturas;
+    }
+    
+    public void setAsignaturas(Set<Asignatura> asignaturas) {
+        this.asignaturas = asignaturas;
+    }
+    
+    public void addAsignatura(Asignatura asignatura) {
+        this.asignaturas.add(asignatura);
+    }
+    
+    public void removeAsignatura(Asignatura asignatura) {
+        this.asignaturas.remove(asignatura);
     }
 
     @Override

@@ -1,5 +1,7 @@
 package curso.ejercicioacademia;
 
+import java.util.HashSet;
+
 /**
  *
  * @author EM
@@ -11,6 +13,7 @@ public class Alumno extends Persona{
     public Alumno() {
         setId(idsAlumnos);
         idsAlumnos++;
+        setAsignaturas(new HashSet<Asignatura>);
     }
 
     public Alumno(String nombre) {
