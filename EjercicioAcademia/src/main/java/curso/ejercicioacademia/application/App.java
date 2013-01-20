@@ -5,6 +5,7 @@ import java.util.Map;
 
 public class App {
     public static void main( String[] args ) {
+
         //Persona p = new Alumno ("Edu");
         Academia academia = new Academia("SuperAcademia", "@Academia");
         System.out.println("Academia: ");
@@ -45,5 +46,9 @@ public class App {
             str += "\n\t" + a.getNombre();
         }
         return str;
+<<<<<<< HEAD
+=======
+>>>>>>> Academia y App
+>>>>>>> origin/master
     }
 }
