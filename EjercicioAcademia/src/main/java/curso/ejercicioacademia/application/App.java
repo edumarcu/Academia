@@ -47,8 +47,11 @@ public class App {
         }
         return str;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Academia y App
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
     }
 }
