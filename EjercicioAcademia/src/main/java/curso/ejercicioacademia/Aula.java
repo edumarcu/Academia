@@ -1,5 +1,8 @@
 package curso.ejercicioacademia;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  *
  * @author EM
@@ -8,17 +11,24 @@ public class Aula {
     private String nombre;
     private int capacidad;
     private boolean tieneProyector;
+    private Set<Asignatura> asignaturas;
 
     public Aula() {
+        this.nombre = "";
+        this.capacidad = 0;
+        this.tieneProyector = false;
+        setAsignaturas(new HashSet<Asignatura>());
     }
     
     public Aula(String nombre, int capacidad) {
+        this();
         this.nombre = nombre;
         this.capacidad = capacidad;
         this.tieneProyector = false;
     }
 
     public Aula(String nombre, int capacidad, boolean tieneProyector) {
+        this();
         this.nombre = nombre;
         this.capacidad = capacidad;
         this.tieneProyector = tieneProyector;
@@ -47,6 +57,14 @@ public class Aula {
 
     public void setTieneProyector(boolean tieneProyector) {
         this.tieneProyector = tieneProyector;
+    }
+
+    public Set<Asignatura> getAsignaturas() {
+        return asignaturas;
+    }
+
+    public void setAsignaturas(Set<Asignatura> asignaturas) {
+        this.asignaturas = asignaturas;
     }
 
     @Override
