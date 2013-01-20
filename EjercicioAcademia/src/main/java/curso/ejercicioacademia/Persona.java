@@ -1,5 +1,7 @@
 package curso.ejercicioacademia;
 
+import java.util.Set;
+
 /**
  * Clase Persona de Academia
  * @author EM
@@ -10,6 +12,7 @@ public abstract class Persona {
     
     private int id;
     private String nombre;
+    private Set<Asignatura> asignatura;
 
     public int getId() {
         return id;
