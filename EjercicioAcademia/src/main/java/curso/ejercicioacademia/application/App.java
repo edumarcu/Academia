@@ -141,9 +141,5 @@ public class App {
             str += "\n\t" + a.getNombre();
         }
         return str;
-<<<<<<< HEAD
-=======
->>>>>>> Academia y App
->>>>>>> origin/master
     }
 }
