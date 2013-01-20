@@ -2,10 +2,10 @@ package curso.ejercicioacademia.application;
 
 import curso.ejercicioacademia.*;
 
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Academia" );
+public class App {
+    public static void main( String[] args ) {
+        Persona p = new Alumno ("Edu");
+        
+        System.out.println(p);
     }
 }
