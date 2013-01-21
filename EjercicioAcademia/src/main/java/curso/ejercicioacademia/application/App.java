@@ -102,11 +102,6 @@ public class App {
         System.out.println(printAulas(academia));
         System.out.println("");   
         
-        // Alumnos de una Asignatura
-        System.out.println("Asignaturas de " + alumnos[2].getNombre());
-        System.out.println(alumnos[2].getAsignaturas());
-        System.out.println("");
-        
         // Alumnos de un profesor, a traves de asignatura
         Profesor p = profesores[1];
         Set<Alumno> alumnosProfesor = new HashSet<Alumno>();
