@@ -2,7 +2,10 @@ package curso.ejercicioacademia.application;
 
 import curso.ejercicioacademia.*;
 import java.util.GregorianCalendar;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class App {
     public static void main( String[] args ) {
@@ -97,6 +100,20 @@ public class App {
         System.out.println(printProfesores(academia));
         System.out.println(printAsignaturas(academia));
         System.out.println(printAulas(academia));
+        
+        // Alumnos de un profesor, a traves de asignatura
+        Profesor p = profesores[1];
+        Set<Alumno> alumnosProfesor = new HashSet<Alumno>();
+        System.out.println("");
+        System.out.println("Alumnos del profesor " + p.getNombre());
+        for (Asignatura a : p.getAsignaturas()){
+            for (Alumno al : a.getAlumnos()){
+                alumnosProfesor.add(al);
+            }    
+        }
+        for (Alumno al : alumnosProfesor) {
+            System.out.println("\t" + al.getNombre());
+        }
         
         // Asignaturas de cada profesor
         System.out.println("");
