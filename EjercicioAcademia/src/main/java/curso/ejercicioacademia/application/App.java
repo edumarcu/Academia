@@ -114,6 +114,11 @@ public class App {
         System.out.println("Asignaturas del Aula " + aulas[1].getNombre());
         System.out.println(aulas[1].getAsignaturas());
         System.out.println("");
+
+        // Asignaturas de cada profesor
+        System.out.println("");
+        System.out.println("Asignaturas del profesor " + profesores[0].getNombre() 
+                            + ": " + profesores[0].getAsignaturas());
     }
     
     public static String printAsignaturas(Academia academia){
