@@ -101,6 +101,14 @@ public class App {
         System.out.println(printAsignaturas(academia));
         System.out.println(printAulas(academia));
         System.out.println("");   
+<<<<<<< HEAD
+=======
+        
+        // Alumnos de una Asignatura
+        System.out.println("Asignaturas de " + alumnos[2].getNombre());
+        System.out.println(alumnos[2].getAsignaturas());
+        System.out.println("");
+>>>>>>> origin/Edu
         
         // Alumnos de un profesor, a traves de asignatura
         Profesor p = profesores[1];
@@ -121,7 +129,6 @@ public class App {
         System.out.println("Asignaturas del profesor " + profesores[0].getNombre() 
                             + ": " + profesores[0].getAsignaturas());
 
-
         // Alumnos de una Asignatura
         System.out.println("Asignaturas de " + alumnos[2].getNombre());
         System.out.println(alumnos[2].getAsignaturas());
@@ -136,6 +143,7 @@ public class App {
         // Asignaturas de un Aula
         System.out.println("Asignaturas del Aula " + aulas[1].getNombre());
         System.out.println(aulas[1].getAsignaturas());
+
     }
     
     public static String printAsignaturas(Academia academia){
