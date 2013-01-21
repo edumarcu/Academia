@@ -59,6 +59,9 @@ public class Asignatura {
 
     public void setProfesor(Profesor profesor) {
         this.profesor = profesor;
+        if (!profesor.getAsignaturas().contains(this.id)){
+            profesor.addAsignatura(this);
+        }
     }
 
     public Aula getAula() {
@@ -67,6 +70,9 @@ public class Asignatura {
 
     public void setAula(Aula aula) {
         this.aula = aula;
+        if (!aula.getAsignaturas().contains(this.id)){
+            aula.addAsignatura(this);
+        }
     }
 
     public int getHoras() {
