@@ -24,6 +24,7 @@ public class Alumno extends Persona{
      @Override
      public void addAsignatura(Asignatura asignatura) {
         getAsignaturas().add(asignatura);
+
         if (!asignatura.getAlumnos().contains(this)){
             asignatura.addAlumno(this);
         }
@@ -32,6 +33,7 @@ public class Alumno extends Persona{
     @Override
     public void removeAsignatura(Asignatura asignatura) {
         getAsignaturas().remove(asignatura);
+
         if (!asignatura.getAlumnos().contains(this)){
             asignatura.removeAlumno(this);
         }
