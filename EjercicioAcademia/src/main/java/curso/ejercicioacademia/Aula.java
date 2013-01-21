@@ -69,12 +69,12 @@ public class Aula {
     
     public void addAsignatura(Asignatura asignatura) {
         getAsignaturas().add(asignatura);
-        asignatura.addAula(this);
+        asignatura.setAula(this);
     }
 
     public void removeAsignatura(Asignatura asignatura) {
         getAsignaturas().remove(asignatura);
-        asignatura.removeAula(this);
+        asignatura.setAula(null);
     }
 
     @Override

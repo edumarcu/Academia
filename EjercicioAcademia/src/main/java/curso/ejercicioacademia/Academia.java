@@ -23,46 +23,46 @@ public class Academia {
         this.direccion = direccion;
     }
 
-    public void add(Alumno alumno){
+    public void addAlumno(Alumno alumno){
         alumnos.put(alumno.getId(),alumno);
     }
-    public void add(Profesor profesor){
+    public void addProfesor(Profesor profesor){
         profesores.put(profesor.getId(),profesor);
     }
-    public void add(Asignatura asignatura){
+    public void addAsignatura(Asignatura asignatura){
         asignaturas.put(asignatura.getId(),asignatura);
     }
-    public void add(Aula aula){
+    public void addAula(Aula aula){
         aulas.put(aula.getNombre(),aula);
     }
     
-    public void remove(Alumno alumno){
+    public void removeAlumno(Alumno alumno){
         alumnos.remove(alumno.getId());
     }
-    public void remove(Profesor profesor){
+    public void removeProfesor(Profesor profesor){
         profesores.remove(profesor.getId());
     }
-    public void remove(Asignatura asignatura){
+    public void removeAsignatura(Asignatura asignatura){
         asignaturas.remove(asignatura.getId());
     }
-    public void remove(Aula aula){
+    public void removeAula(Aula aula){
         aulas.remove(aula.getNombre());
     }
    
-    public SortedMap<Integer,Asignatura> getAsignaturas(){     
-        return (SortedMap) asignaturas;
+    public HashMap<Integer,Asignatura> getAsignaturas(){     
+        return (HashMap) asignaturas;
     }
     
-    public SortedMap<Integer,Profesor> getProfesores(){     
-        return (SortedMap) profesores;
+    public HashMap<Integer,Profesor> getProfesores(){     
+        return (HashMap) profesores;
     }
         
-    public SortedMap<String,Aula> getAulas(){     
-        return (SortedMap) aulas;
+    public HashMap<String,Aula> getAulas(){     
+        return (HashMap) aulas;
     }
             
-    public SortedMap<Integer,Alumno> getAlumnos(){     
-        return (SortedMap) alumnos;
+    public HashMap<Integer,Alumno> getAlumnos(){     
+        return (HashMap) alumnos;
     }       
 
     @Override
