@@ -21,10 +21,12 @@ public class Asignatura {
     }
 
     public Asignatura(String nombre) {
+        this();
         this.nombre = nombre;
     }
 
     public Asignatura(String nombre, int horas, Date inicio, Date fin) {
+        this();
         this.nombre = nombre;
         this.horas = horas;
         this.inicio = inicio;
@@ -120,4 +122,27 @@ public class Asignatura {
             alumno.removeAsignatura(this);
         }
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Asignatura other = (Asignatura) obj;
+        if (this.id != other.id) {
+            return false;
+        }
+        return true;
+    }
+    
+    
 }
