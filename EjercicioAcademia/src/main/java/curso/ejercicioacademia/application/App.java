@@ -98,6 +98,7 @@ public class App {
         System.out.println(printAsignaturas(academia));
         System.out.println(printAulas(academia));
         
+<<<<<<< HEAD
         // Alumnos de una Asignatura
         System.out.println("Asignaturas de " + alumnos[2].getNombre());
         System.out.println(alumnos[2].getAsignaturas());
@@ -106,11 +107,17 @@ public class App {
         System.out.println("Asignaturas del Aula " + aulas[1].getNombre());
         System.out.println(aulas[1].getAsignaturas());
 
+=======
+>>>>>>> App - Pregunta 1
         // Asignaturas de cada profesor
         System.out.println("");
         System.out.println("Asignaturas del profesor " + profesores[0].getNombre() 
                             + ": " + profesores[0].getAsignaturas());
 
+<<<<<<< HEAD
+=======
+        
+>>>>>>> App - Pregunta 1
     }
     
     public static String printAsignaturas(Academia academia){
