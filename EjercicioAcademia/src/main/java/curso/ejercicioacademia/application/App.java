@@ -120,17 +120,6 @@ public class App {
         System.out.println("Asignaturas de " + alumnos[2].getNombre());
         System.out.println(alumnos[2].getAsignaturas());
         System.out.println("");
-
-        
-        // Asignaturas de cada profesor
-        System.out.println("");
-        System.out.println("Asignaturas del profesor " + profesores[0].getNombre() 
-                            + ": " + profesores[0].getAsignaturas());
-
-        // Alumnos de una Asignatura
-        System.out.println("Asignaturas de " + alumnos[2].getNombre());
-        System.out.println(alumnos[2].getAsignaturas());
-        System.out.println("");
         
         // Asignaturas de cada profesor
         System.out.println("");
