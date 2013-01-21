@@ -63,18 +63,24 @@ public class Aula {
         return asignaturas;
     }
 
-    public void setAsignaturas(Set<Asignatura> asignaturas) {
+    private void setAsignaturas(Set<Asignatura> asignaturas) {
         this.asignaturas = asignaturas;
     }
     
     public void addAsignatura(Asignatura asignatura) {
         getAsignaturas().add(asignatura);
-        asignatura.setAula(this);
+        
+        if (asignatura.getAula() != this){
+            asignatura.setAula(this);
+        }
     }
 
     public void removeAsignatura(Asignatura asignatura) {
         getAsignaturas().remove(asignatura);
-        asignatura.setAula(null);
+        
+        if (asignatura.getAula() == this){
+            asignatura.setAula(null);
+        }
     }
 
     @Override
