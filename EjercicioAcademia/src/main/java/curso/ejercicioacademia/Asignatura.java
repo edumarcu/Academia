@@ -61,7 +61,7 @@ public class Asignatura {
 
     public void setProfesor(Profesor profesor) {
         this.profesor = profesor;
-        if (!profesor.getAsignaturas().contains(this.id)){
+        if (!profesor.getAsignaturas().contains(this)){
             profesor.addAsignatura(this);
         }
     }
@@ -72,7 +72,7 @@ public class Asignatura {
 
     public void setAula(Aula aula) {
         this.aula = aula;
-        if (!aula.getAsignaturas().contains(this.id)){
+        if (!aula.getAsignaturas().contains(this)){
             aula.addAsignatura(this);
         }
     }
@@ -111,14 +111,14 @@ public class Asignatura {
     
     public void addAlumno(Alumno alumno){
         alumnos.add(alumno);
-        if (!alumno.getAsignaturas().contains(this.id)){
+        if (!alumno.getAsignaturas().contains(this)){
             alumno.addAsignatura(this);
         }       
     }
     
     public void removeAlumno(Alumno alumno){
         alumnos.remove(alumno);
-        if (!alumno.getAsignaturas().contains(this.id)){
+        if (!alumno.getAsignaturas().contains(this)){
             alumno.removeAsignatura(this);
         }
     }
