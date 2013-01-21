@@ -20,6 +20,17 @@ public class Asignatura {
         idsAsignaturas++;
     }
 
+    public Asignatura(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Asignatura(String nombre, int horas, Date inicio, Date fin) {
+        this.nombre = nombre;
+        this.horas = horas;
+        this.inicio = inicio;
+        this.fin = fin;
+    }
+    
     @Override
     public String toString() {
         return "Asignatura{" + "id=" + this.getId() 
