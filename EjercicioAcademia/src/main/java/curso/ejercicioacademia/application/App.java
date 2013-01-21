@@ -114,7 +114,6 @@ public class App {
         System.out.println("Asignaturas del Aula " + aulas[1].getNombre());
         System.out.println(aulas[1].getAsignaturas());
         System.out.println("");
-
     }
     
     public static String printAsignaturas(Academia academia){
