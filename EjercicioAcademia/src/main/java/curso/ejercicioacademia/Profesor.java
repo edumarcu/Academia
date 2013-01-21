@@ -24,13 +24,19 @@ public class Profesor extends Persona{
     @Override
      public void addAsignatura(Asignatura asignatura) {
         getAsignaturas().add(asignatura);
-        asignatura.setProfesor(this);
+        
+        if (asignatura.getProfesor() != this){
+            asignatura.setProfesor(this);
+        }
     }
     
     @Override
     public void removeAsignatura(Asignatura asignatura) {
         getAsignaturas().remove(asignatura);
-        asignatura.setProfesor(null);
+        
+        if (asignatura.getProfesor() == this){
+            asignatura.setProfesor(null);
+        }
     }
     
     @Override
